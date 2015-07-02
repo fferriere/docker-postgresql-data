@@ -2,7 +2,7 @@
 
 NAME='fferriere-postgresql-data'
 if [ -n "$FFERRIERE_PG_DATA_NAME" ]; then
-    NAME="$FERRIERE_PG_DATA_NAME"
+    NAME="$FFERRIERE_PG_DATA_NAME"
 fi
 
 IMAGE='fferriere/postgresql-data'
