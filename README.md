@@ -1,6 +1,7 @@
 # docker-postgresql-data
 
-This project create a data container for fferriere-postgresql-server container
+This project create a data container for fferriere-postgresql-server container.
+The container is based on [docker-postgresql-base](https://github.com/fferriere/docker-postgresql-base) image.
 
 Build
 -----

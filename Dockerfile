@@ -1,16 +1,14 @@
-FROM fferriere/base
+FROM fferriere/postgresql-base
 
 MAINTAINER ferriere.florian@gmail.com
 
 ADD files /etc/
 
-RUN mkdir /var/lib/postgresql; \
-    mkdir /var/run/postgresql; \
+RUN mkdir /var/run/postgresql; \
     mkdir /var/log/postgresql; \
-    chown 102:105 /var/lib/postgresql; \
-    chown 102:105 /var/run/postgresql; \
-    chown 102:105 /var/log/postgresql; \
-    chown -R 102:105 /etc/postgresql/;
+    chown postgres:postgres /var/run/postgresql; \
+    chown postgres:postgres /var/log/postgresql; \
+    chown -R postgres:postgres /etc/postgresql/;
 
 VOLUME [ "/var/lib/postgresql", "/var/run/postgresql", "/var/log/postgresql", "/etc/postgresql" ]
 
